@@ -132,7 +132,7 @@ Tip: For every day, we only care about one single trip with the longest distance
 
 - 2019-10-31
 
-  ```
+```
 with longest_trip as(
 select max(trip_distance) as longest_dist from public.green_taxi_data
 )
