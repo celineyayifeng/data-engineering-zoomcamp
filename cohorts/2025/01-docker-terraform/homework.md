@@ -150,9 +150,14 @@ Which were the top pickup locations with over 13,000 in
 Consider only `lpep_pickup_datetime` when filtering by date.
  
 - East Harlem North, East Harlem South, Morningside Heights
-- East Harlem North, Morningside Heights
-- Morningside Heights, Astoria Park, East Harlem South
-- Bedford, East Harlem North, Astoria Park
+
+```
+select b."Zone", b.service_zone, sum(total_amount) as sm
+from green_taxi_data a 
+inner join zones b on a."PULocationID" = b."LocationID" and a.lpep_pickup_datetime >= '2019-10-18' and a.lpep_pickup_datetime < '2019-10-19'
+group by 1,2
+order by sm desc;
+```
 
 
 ## Question 6. Largest tip
