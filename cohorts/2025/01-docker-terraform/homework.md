@@ -170,10 +170,16 @@ Note: it's `tip` , not `trip`
 
 We need the name of the zone, not the ID.
 
-- Yorkville West
-- JFK Airport
 - East Harlem North
-- East Harlem South
+
+```
+select b."Zone", sum(tip_amount) as sm
+from green_taxi_data a 
+inner join zones b on a."PULocationID" = b."LocationID" and a.lpep_pickup_datetime >= '2019-10-01' and a.lpep_pickup_datetime < '2019-11-01'
+group by 1
+order by sm desc;
+
+```
 
 
 ## Terraform
