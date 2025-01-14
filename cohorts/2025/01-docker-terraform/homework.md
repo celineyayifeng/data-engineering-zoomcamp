@@ -92,25 +92,33 @@ During the period of October 1st 2019 (inclusive) and November 1st 2019 (exclusi
 2. In between 1 (exclusive) and 3 miles (inclusive),
 3. In between 3 (exclusive) and 7 miles (inclusive),
 4. In between 7 (exclusive) and 10 miles (inclusive),
-5. Over 10 miles 
+5. Over 10 miles
 
 Answers:
-
-`select COUNT(*) from green_taxi_data where lpep_pickup_datetime >= '2019-10-01' and lpep_dropoff_datetime < '2019-11-01' and trip_distance <= 1;`
-
 - 104,802;  
-
-`select COUNT(*) from green_taxi_data where lpep_pickup_d atetime >= '2019-10-01' and lpep_dropoff_datetime < '2019-11-01' and trip_distance > 1 and trip_distance <=3;`
-
 - 198,924;
-
-- 104,793;  201,407;  110,612;  27,831;  35,281
-
-`select COUNT(*) from green_taxi_data where lpep_pickup_datetime >= '2019-10-01' and lpep_dropoff_datetime < '2019-11-01' and trip_distance > 7  and trip_distance <=10;`
-
+- 110,612;
 - 27,678;
-  
-- 104,838;  199,013;  109,645;  27,688;  35,202
+- 35,202;
+
+`
+create temp table test as
+SELECT *, case when trip_distance <= 1 then 'up to 1 '
+			when trip_distance > 1 and trip_distance <= 3 then 'between 1 and 3'
+			when trip_distance > 3 and trip_distance <= 7 then 'between 3 and 7'
+			when trip_distance > 7 and trip_distance <= 10 then ' between 7 and 10'
+			when trip_distance > 10 then 'greater than 10'
+			end as groups 
+FROM public.green_taxi_data
+WHERE lpep_pickup_datetime >= '2019-10-01' and lpep_dropoff_datetime < '2019-11-01'
+;
+`
+RESULT: 
+"between 1 and 3"	198924
+"greater than 10"	35189
+" between 7 and 10"	27678
+"up to 1 "	104802
+"between 3 and 7"	109603
 
 
 ## Question 4. Longest trip for each day
