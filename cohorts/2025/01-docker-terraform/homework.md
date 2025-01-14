@@ -95,11 +95,14 @@ During the period of October 1st 2019 (inclusive) and November 1st 2019 (exclusi
 5. Over 10 miles 
 
 Answers:
+`select COUNT(*) from green_taxi_data where lpep_pickup_datetime >= '2019-10-01' and lpep_dropoff_datetime < '2019-11-01' and trip_distance <= 1;`
+- 104,802;  
+`select COUNT(*) from green_taxi_data where lpep_pickup_d atetime >= '2019-10-01' and lpep_dropoff_datetime < '2019-11-01' and trip_distance > 1 and trip_distance <=3;`
+- 198,924;
 
-- 104,802;  197,670;  110,612;  27,831;  35,281
-- 104,802;  198,924;  109,603;  27,678;  35,189
 - 104,793;  201,407;  110,612;  27,831;  35,281
-- 104,793;  202,661;  109,603;  27,678;  35,189
+`select COUNT(*) from green_taxi_data where lpep_pickup_datetime >= '2019-10-01' and lpep_dropoff_datetime < '2019-11-01' and trip_distance > 7  and trip_distance <=10;`
+- 27,678;  
 - 104,838;  199,013;  109,645;  27,688;  35,202
 
 
