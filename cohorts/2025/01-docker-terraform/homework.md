@@ -138,7 +138,6 @@ select max(trip_distance) as longest_dist from public.green_taxi_data
 )
 select lpep_pickup_datetime FROM public.green_taxi_data 
 where trip_distance IN (select longest_dist from longest_trip)
-
 ```
 
 
@@ -178,7 +177,6 @@ from green_taxi_data a
 inner join zones b on a."PULocationID" = b."LocationID" and a.lpep_pickup_datetime >= '2019-10-01' and a.lpep_pickup_datetime < '2019-11-01'
 group by 1
 order by sm desc;
-
 ```
 
 
