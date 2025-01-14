@@ -169,14 +169,21 @@ Note: it's `tip` , not `trip`
 
 We need the name of the zone, not the ID.
 
-- East Harlem North
+- JFK Airport
 
 ```
-select b."Zone", sum(tip_amount) as sm
+create temp table PU_tbl as
+select a."DOLocationID", a.tip_amount
 from green_taxi_data a 
-inner join zones b on a."PULocationID" = b."LocationID" and a.lpep_pickup_datetime >= '2019-10-01' and a.lpep_pickup_datetime < '2019-11-01'
+inner join zones b on a."PULocationID" = b."LocationID" 
+and b."Zone" = 'East Harlem North' and a.lpep_pickup_datetime >= '2019-10-01' and a.lpep_pickup_datetime < '2019-11-01'
+;
+
+select b."Zone", max(tip_amount) as mx 
+from PU_tbl a inner join zones b 
+on a."DOLocationID" = b."LocationID" 
 group by 1
-order by sm desc;
+order by mx desc;
 ```
 
 
