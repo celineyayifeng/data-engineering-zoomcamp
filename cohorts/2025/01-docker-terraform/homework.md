@@ -101,7 +101,7 @@ Answers:
 - 27,678;
 - 35,202;
 
-`
+```
 create temp table test as
 SELECT *, case when trip_distance <= 1 then 'up to 1 '
 			when trip_distance > 1 and trip_distance <= 3 then 'between 1 and 3'
@@ -112,7 +112,9 @@ SELECT *, case when trip_distance <= 1 then 'up to 1 '
 FROM public.green_taxi_data
 WHERE lpep_pickup_datetime >= '2019-10-01' and lpep_dropoff_datetime < '2019-11-01'
 ;
-`
+
+```
+
 RESULT: 
 "between 1 and 3"	198924
 "greater than 10"	35189
@@ -128,10 +130,16 @@ Use the pick up time for your calculations.
 
 Tip: For every day, we only care about one single trip with the longest distance. 
 
-- 2019-10-11
-- 2019-10-24
-- 2019-10-26
 - 2019-10-31
+
+  ```
+with longest_trip as(
+select max(trip_distance) as longest_dist from public.green_taxi_data
+)
+select lpep_pickup_datetime FROM public.green_taxi_data 
+where trip_distance IN (select longest_dist from longest_trip)
+
+```
 
 
 ## Question 5. Three biggest pickup zones
