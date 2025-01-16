@@ -206,11 +206,7 @@ Which of the following sequences, **respectively**, describes the workflow for:
 3. Remove all resources managed by terraform`
 
 Answers:
-- terraform import, terraform apply -y, terraform destroy
-- teraform init, terraform plan -auto-apply, terraform rm
-- terraform init, terraform run -auto-aprove, terraform destroy
-- terraform init, terraform apply -auto-aprove, terraform destroy
-- terraform import, terraform apply -y, terraform rm
+- terraform init, terraform apply -auto-approve, terraform destroy
 
 
 ## Submitting the solutions
