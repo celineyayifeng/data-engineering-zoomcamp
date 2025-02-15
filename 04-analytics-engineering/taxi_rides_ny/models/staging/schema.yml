@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: staging
     database: de-zoomcamp-446715
-    schema: dbt_cfeng
+    schema: zoomcamp
       # loaded_at_field: record_loaded_at
     tables:
       - name: green_tripdata
