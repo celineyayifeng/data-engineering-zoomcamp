@@ -43,10 +43,13 @@ Create a core model similar to fact trips, but selecting from stg_fhv_tripdata a
 Similar to what we've done in fact_trips, keep only records with known pickup and dropoff locations entries for pickup and dropoff locations. 
 Run the dbt model without limits (is_test_run: false).
 
-- 12998722
 - 22998722
-- 32998722
-- 42998722
+
+<img width="827" alt="image" src="https://github.com/user-attachments/assets/fccb3af4-f0fb-46e4-82f4-bb753bec803f" />
+
+<img width="857" alt="image" src="https://github.com/user-attachments/assets/51cafffc-c888-4f41-a2e2-238888b2b8b3" />
+
+<img width="765" alt="image" src="https://github.com/user-attachments/assets/aea06012-86dc-4dc5-8e09-a3d3fae4c028" />
 
 ### Question 4 (2 points)
 
