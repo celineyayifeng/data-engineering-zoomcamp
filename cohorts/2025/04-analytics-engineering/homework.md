@@ -57,10 +57,14 @@ Run the dbt model without limits (is_test_run: false).
 
 Create a dashboard with some tiles that you find interesting to explore the data. One tile should show the amount of trips per month, as done in the videos for fact_trips, including the fact_fhv_trips data.
 
-- FHV
-- Green
 - Yellow
-- FHV and Green
+
+![image](https://github.com/user-attachments/assets/e41da9bd-33e3-446c-a1ed-980eae5165c1)
+
+![image](https://github.com/user-attachments/assets/f462cfe1-343e-4d55-ad42-e818538781c5)
+
+![image](https://github.com/user-attachments/assets/5d9d82c3-01f3-498f-89c3-c07683f0ed74)
+
 
 
 ## Submitting the solutions
