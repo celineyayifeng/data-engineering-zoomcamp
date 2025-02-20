@@ -67,8 +67,11 @@ What would you change to accomplish that in a such way that command line argumen
 
 - Update the WHERE clause to `pickup_datetime >= CURRENT_DATE - INTERVAL '{{ var("days_back", env_var("DAYS_BACK", "30")) }}' DAY`
 
+
 Command line arguments (--vars or vars: in dbt_project.yml) takes highest precedence
+
 Environment variables (DAYS_BACK) takes second precedence
+
 Default value ("30") takes lowest precedence
 
 
@@ -80,11 +83,7 @@ Considering the data lineage below **and** that taxi_zone_lookup is the **only**
 
 Select the option that does **NOT** apply for materializing `fct_taxi_monthly_zone_revenue`:
 
-- `dbt run`
 - `dbt run --select +models/core/dim_taxi_trips.sql+ --target prod`
-- `dbt run --select +models/core/fct_taxi_monthly_zone_revenue.sql`
-- `dbt run --select +models/core/`
-- `dbt run --select models/staging/+`
 
 
 ### Question 4: dbt Macros and Jinja
