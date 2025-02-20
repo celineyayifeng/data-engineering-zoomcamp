@@ -182,10 +182,9 @@ Now...
 For the Trips that **respectively** started from `Newark Airport`, `SoHo`, and `Yorkville East`, in November 2019, what are **dropoff_zones** with the 2nd longest p90 trip_duration ?
 
 - LaGuardia Airport, Chinatown, Garment District
-- LaGuardia Airport, Park Slope, Clinton East
-- LaGuardia Airport, Saint Albans, Howard Beach
-- LaGuardia Airport, Rosedale, Bath Beach
-- LaGuardia Airport, Yorkville East, Greenpoint
+
+<img width="1039" alt="image" src="https://github.com/user-attachments/assets/c2bdfc7e-d8ad-4c5b-ab25-cd529059b397" />
+<img width="1028" alt="image" src="https://github.com/user-attachments/assets/f394f7e8-18ba-4ebb-a0a5-8568be704e88" />
 
 
 ## Submitting the solutions
