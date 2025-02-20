@@ -143,11 +143,13 @@ You might want to add some new dimensions `year` (e.g.: 2019, 2020), `quarter` (
 
 Considering the YoY Growth in 2020, which were the yearly quarters with the best (or less worse) and worst results for green, and yellow
 
-- green: {best: 2020/Q2, worst: 2020/Q1}, yellow: {best: 2020/Q2, worst: 2020/Q1}
-- green: {best: 2020/Q2, worst: 2020/Q1}, yellow: {best: 2020/Q3, worst: 2020/Q4}
-- green: {best: 2020/Q1, worst: 2020/Q2}, yellow: {best: 2020/Q2, worst: 2020/Q1}
+
 - green: {best: 2020/Q1, worst: 2020/Q2}, yellow: {best: 2020/Q1, worst: 2020/Q2}
-- green: {best: 2020/Q1, worst: 2020/Q2}, yellow: {best: 2020/Q3, worst: 2020/Q4}
+
+
+<img width="667" alt="image" src="https://github.com/user-attachments/assets/380565c9-63d2-4f0b-bc18-310a5cb86737" />
+
+<img width="674" alt="image" src="https://github.com/user-attachments/assets/377e5b80-9141-49c7-9d22-a464febffc0b" />
 
 
 ### Question 6: P97/P95/P90 Taxi Monthly Fare
