@@ -44,11 +44,9 @@ select *
 from {{ source('raw_nyc_tripdata', 'ext_green_taxi' ) }}
 ```
 
-- `select * from dtc_zoomcamp_2025.raw_nyc_tripdata.ext_green_taxi`
-- `select * from dtc_zoomcamp_2025.my_nyc_tripdata.ext_green_taxi`
+
 - `select * from myproject.raw_nyc_tripdata.ext_green_taxi`
-- `select * from myproject.my_nyc_tripdata.ext_green_taxi`
-- `select * from dtc_zoomcamp_2025.raw_nyc_tripdata.green_taxi`
+
 
 
 ### Question 2: dbt Variables & Dynamic Models
@@ -66,11 +64,12 @@ where pickup_datetime >= CURRENT_DATE - INTERVAL '30' DAY
 
 What would you change to accomplish that in a such way that command line arguments takes precedence over ENV_VARs, which takes precedence over DEFAULT value?
 
-- Add `ORDER BY pickup_datetime DESC` and `LIMIT {{ var("days_back", 30) }}`
-- Update the WHERE clause to `pickup_datetime >= CURRENT_DATE - INTERVAL '{{ var("days_back", 30) }}' DAY`
-- Update the WHERE clause to `pickup_datetime >= CURRENT_DATE - INTERVAL '{{ env_var("DAYS_BACK", "30") }}' DAY`
+
 - Update the WHERE clause to `pickup_datetime >= CURRENT_DATE - INTERVAL '{{ var("days_back", env_var("DAYS_BACK", "30")) }}' DAY`
-- Update the WHERE clause to `pickup_datetime >= CURRENT_DATE - INTERVAL '{{ env_var("DAYS_BACK", var("days_back", "30")) }}' DAY`
+
+Command line arguments (--vars or vars: in dbt_project.yml) takes highest precedence
+Environment variables (DAYS_BACK) takes second precedence
+Default value ("30") takes lowest precedence
 
 
 ### Question 3: dbt Data Lineage and Execution
