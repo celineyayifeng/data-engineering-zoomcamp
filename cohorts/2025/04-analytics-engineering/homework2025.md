@@ -79,11 +79,25 @@ Default value ("30") takes lowest precedence
 
 Considering the data lineage below **and** that taxi_zone_lookup is the **only** materialization build (from a .csv seed file):
 
-![image](./homework_q2.png)
+![image](https://github.com/user-attachments/assets/7c594c8e-7459-4494-a74d-9523793224d3)
+
 
 Select the option that does **NOT** apply for materializing `fct_taxi_monthly_zone_revenue`:
 
-- `dbt run --select +models/core/dim_taxi_trips.sql+ --target prod`
+The option that does **NOT** apply for materializing `fct_taxi_monthly_zone_revenue` is:
+
+✅ **`dbt run --select models/staging/+`**
+
+### Explanation:
+- `fct_taxi_monthly_zone_revenue` is in `models/core/`, not `models/staging/`. The `dbt run --select models/staging/+` command only runs models within the `staging` directory and its subdirectories, excluding models from `core/`, where the target model resides.
+
+### Breakdown of Other Options:
+- **`dbt run`** → Runs all models, including `fct_taxi_monthly_zone_revenue`. ✅
+- **`dbt run --select +models/core/dim_taxi_trips.sql+ --target prod`** → The `+` selectors indicate parent/child dependencies, so if `dim_taxi_trips` is upstream of `fct_taxi_monthly_zone_revenue`, it will also be materialized. ✅
+- **`dbt run --select +models/core/fct_taxi_monthly_zone_revenue.sql`** → Runs the model and its dependencies. ✅
+- **`dbt run --select models/core/`** → Runs all models in `core/`, including `fct_taxi_monthly_zone_revenue`. ✅
+
+Thus, **`dbt run --select models/staging/+` does NOT apply.** 🚫
 
 
 ### Question 4: dbt Macros and Jinja
