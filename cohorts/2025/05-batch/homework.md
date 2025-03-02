@@ -63,10 +63,7 @@ What is the length of the longest trip in the dataset in hours?
 
 Spark’s User Interface which shows the application's dashboard runs on which local port?
 
-- 80
-- 443
 - 4040
-- 8080
 
 
 ## Question 6: Least frequent pickup location zone
@@ -80,9 +77,8 @@ wget https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv
 Using the zone lookup data and the Yellow October 2024 data, what is the name of the LEAST frequent pickup location Zone?
 
 - Governor's Island/Ellis Island/Liberty Island
-- Arden Heights
-- Rikers Island
-- Jamaica Bay
+
+<img width="1041" alt="image" src="https://github.com/user-attachments/assets/67d294fa-8026-46ba-be1b-3dcc8f06da3d" />
 
 
 ## Submitting the solutions
