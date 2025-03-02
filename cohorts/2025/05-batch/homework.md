@@ -45,21 +45,19 @@ How many taxi trips were there on the 15th of October?
 
 Consider only trips that started on the 15th of October.
 
-- 85,567
-- 105,567
-- 125,567
-- 145,567
+- 128909
+
+<img width="1105" alt="image" src="https://github.com/user-attachments/assets/f69f3954-5b1e-47bf-82e8-5cdf43b9b4e2" />
+
 
 
 ## Question 4: Longest trip
 
 What is the length of the longest trip in the dataset in hours?
 
-- 122
-- 142
 - 162
-- 182
 
+  <img width="1051" alt="image" src="https://github.com/user-attachments/assets/ea942071-bd47-4b42-a71d-991f1524a6fb" />
 
 ## Question 5: User Interface
 
@@ -69,7 +67,6 @@ Spark’s User Interface which shows the application's dashboard runs on which l
 - 443
 - 4040
 - 8080
-
 
 
 ## Question 6: Least frequent pickup location zone
