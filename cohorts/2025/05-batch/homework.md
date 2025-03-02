@@ -18,6 +18,8 @@ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-10.par
 
 What's the output?
 
+The PySpark 3.5.5 version is running...
+
 > [!NOTE]
 > To install PySpark follow this [guide](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/05-batch/setup/pyspark.md)
 
