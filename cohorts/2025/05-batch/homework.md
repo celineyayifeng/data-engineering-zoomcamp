@@ -32,10 +32,11 @@ Repartition the Dataframe to 4 partitions and save it to parquet.
 
 What is the average size of the Parquet (ending with .parquet extension) Files that were created (in MB)? Select the answer which most closely matches.
 
-- 6MB
+
 - 25MB
-- 75MB
-- 100MB
+
+<img width="710" alt="image" src="https://github.com/user-attachments/assets/10d454da-699c-4f8e-aeb5-9d846955e311" />
+
 
 
 ## Question 3: Count records 
